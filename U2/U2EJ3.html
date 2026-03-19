@@ -54,7 +54,41 @@
     </body>
 	<script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
+		function createTitle (titleTxt) {
+			const titleElem = document.querySelector(".title");
+			if (titleElem !== null) {
+				return;
+			}
+			const titleH1 = document.createElement("h1");
+			titleH1.textContent = titleTxt;
+
+			const myTitle = document.createElement("div");
+			myTitle.classList.add("title");
+			myTitle.appendChild(titleH1);
+
+			const myContent = document.getElementById("myContent");
+			myContent.appendChild(myTitle);
+		}
+
+		function createParagraph (textp) {
+			const titleElem = document.querySelector(".title");
+			if (titleElem === null) {
+				return;
+			}
+			const elementP = document.createElement("p");
+			elementP.classList.add("paragraph");
+			elementP.textContent = textp;
+			titleElem.appendChild(elementP);
+		}
 		
+		createTitle("Exercicis Tema 3");
+		createParagraph("conté exercicis del mobul B1");
+		createParagraph("del Tema 3");
+		createParagraph("de la unitat 2");
+
+		const pToRemove = document.querySelector(".paragraph");
+		pToRemove.remove();
+
 	</script>
     <script defer id="test">
         /**
