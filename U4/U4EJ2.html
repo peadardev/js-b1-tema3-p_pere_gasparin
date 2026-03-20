@@ -68,6 +68,18 @@
         </form>
         <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
+        function incompatibleExtras(event) {
+            if (event.target.id === 'sunroof') {
+                document.querySelector('#armored-windows').checked = false;
+                document.querySelector('#tinted-windows').checked = false;
+            }
+            if (event.target.id === 'armored-windows' || event.target.id === 'tinted-windows') {
+                document.querySelector('#sunroof').checked = false;
+            }
+        }
+        document.querySelectorAll("input[name='extras']").forEach((input) => {
+            input.addEventListener('change', incompatibleExtras);
+        });
 
         </script>
         <script defer id="test">

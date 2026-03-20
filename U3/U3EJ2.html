@@ -80,8 +80,7 @@
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
         const myContent = document.getElementById("myContent");
          function showClass (event) {
-            const container = event.target;
-            myContent.textContent = container.classList;
+            myContent.textContent = event.target.classList;
         }
 
         const containerRed = document.getElementsByClassName("red")[0];
