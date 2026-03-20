@@ -78,7 +78,19 @@
     </body>
     <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
-        
+        const myContent = document.getElementById("myContent");
+         function showClass (event) {
+            const container = event.target;
+            myContent.textContent = container.classList;
+        }
+
+        const containerRed = document.getElementsByClassName("red")[0];
+        containerRed.addEventListener("click", showClass);
+        const containerGreen = document.getElementsByClassName("green")[0];
+        containerGreen.addEventListener("click", showClass);
+        const containerOrange = document.getElementsByClassName("orange")[0];
+        containerOrange.addEventListener("click", showClass);
+
     </script>
     <script defer id="test">
         /**

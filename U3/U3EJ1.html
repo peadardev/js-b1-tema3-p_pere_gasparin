@@ -47,7 +47,22 @@
     </div>
     <script defer id="solutionJS">
         //Escribe aquí tu solución / escriviu aquí la vostra solució:
-          
+        const circle = document.getElementById("circle");
+        const rect = document.getElementById("rect");
+        const polygon = document.getElementById("polygon");
+
+        circle.addEventListener("mouseover", () => {
+          circle.classList.replace(circle.classList, rect.classList);
+        });
+
+        rect.addEventListener("mouseover", () => {
+          rect.classList.replace(rect.classList, polygon.classList);
+        });
+
+        polygon.addEventListener("mouseover", () => {
+          polygon.classList.replace(polygon.classList, circle.classList);
+        });
+            
 	</script>
     <script defer id="test">
         /**
@@ -56,7 +71,7 @@
         * Do not modify this script
         */
         document.getElementById('circle').dispatchEvent(new Event('mouseover'));
-        document.getElementById('polygon').dispatchEvent(new Event('mouseover'));        
+        document.getElementById('polygon').dispatchEvent(new Event('mouseover'));               
         window.test = document.querySelector(".svg-container");
     </script>
   </body>
